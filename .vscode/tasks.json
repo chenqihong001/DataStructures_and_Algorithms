@@ -7,9 +7,11 @@
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
-                "${file}",
+                "${fileDirname}\\*.cpp",
                 "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+                "${workspaceFolder}\\build\\${fileBasenameNoExtension}.exe", //${fileBasenameNoExtension} 也是一个变量，表示当前打开文件的基本名称（不包含文件扩展名）。
+                "-I",
+                "${workspaceFolder}\\include"
             ],
             "options": {
                 "cwd": "${fileDirname}"

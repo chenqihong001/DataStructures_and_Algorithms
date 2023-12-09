@@ -1,8 +1,12 @@
 #include <iostream>
+#include "stack.h"
 int main()
 {
-    std::cout << "Hello World";
-    int a = 45;
-    a = 99;
+    Stack_Sequential<int> stack;
+    stack.Push(89);
+    stack.Push(20);
+    stack.Push(20);
+    stack.Pop();
+    std::cout << stack.GetTop();
     return 0;
 }
